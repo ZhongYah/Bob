@@ -9,13 +9,11 @@ public class Hello {
         int age = 19;
         Integer age2 = 19;
         char c = '§Ú';
-        Character c2 = 'A';
+        Character C2 = 'A';
         byte b = 120;
-        float weight = 66.5f;
         float height = 1.7f;
         boolean adult = true;
         boolean enroll = false;
         String name = "Tom";
-        String nam = "Tom";
     }
 }
