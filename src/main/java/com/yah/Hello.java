@@ -16,6 +16,5 @@ public class Hello {
         boolean adult = true;
         boolean enroll = false;
         String name = "Tom";
-        String nam = "Tom";
     }
 }
