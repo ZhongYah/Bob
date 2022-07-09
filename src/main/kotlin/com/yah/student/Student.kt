@@ -1,4 +1,4 @@
-package com.yah.student
+package com.yah.student.kotlin
 
 fun main(args: Array<String>) {
     val stu = Student("Bob", 70, 88)
