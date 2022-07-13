@@ -3,6 +3,11 @@ package com.yah
 import javafx.scene.text.FontWeight
 
 fun main(args: Array<String>) {
+    var s:String?= "abcde"
+    s = null
+    println(s?.length)
+    println(s?.get(3))
+    println(s?.substring(3))
 //    println("Hello kotlin")
     val h = Human(weight = 72f, height = 1.69f )
     println(h.bmi())

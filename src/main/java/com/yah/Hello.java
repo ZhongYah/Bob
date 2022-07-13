@@ -4,6 +4,9 @@ public class Hello {
     public static void main(String[] args) {
 //        System.out.println("Hello word");
       // new Person().hello();
+        String s = "abcde";
+        System.out.println(s.charAt(3));
+        System.out.println(s.substring(1,4));
         Person p = new Person("Bob",72f, 1.69f);
         p.hello();
         p.weight = 72f;
