@@ -4,11 +4,12 @@ import java.util.Scanner
 
 fun main(args: Array<String>) {
   //  userln()
-    val stu = Student("Hank", 77, 99)
+    val stu = Student("Nian", 77, 20)
     stu.print()
     val test = 123
     println("Try is : $test")
-    println("Hight score: ${stu.highest()}")}
+    println("Hight score: ${stu.highest()}")
+}
 
 private fun userln() {
     val scanner = Scanner(System.`in`)
@@ -27,10 +28,12 @@ private fun userln() {
 
 class Student (var name: String?, var english: Int, var math: Int) {
     fun print() {
-        println(name + "\t" + english + "\t" + math + "\t" +
-                (english + math) / 2)
+        println(name + " " + english + "\t" + math + "\t" + getAverage() + "\t" +
+                if (getAverage() >= 60)"PASS" else "FAILED")
     }
-
+    fun getAverage() : Int {
+        return (english + math) / 2
+    }
     fun highest() : Int {
         var max = if (english > math) {
             println("english")
