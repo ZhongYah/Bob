@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class StudentRunner {
     public static void main(String[] args) {
        //userIntput();
-        Student stu = new Student("Bob", 88 , 10 );
+        Student stu = new Student("Bob", 88 , 30 );
         stu.print();
-        System.out.println("High scores:" + stu.highest());
+        System.out.println("High scores: " + stu.highest());
     }
 
     private static void userIntput() {
