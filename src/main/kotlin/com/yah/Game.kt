@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     while (number != secret) {
         print("Please enter a number: ")
     //    number = scanner.nextInt()
-        number = readLine()!!.toInt()
+        number = readLine()!!.toInt()            // !! = Exception處理
         if (number < secret) {
             println("higher")
         } else if (number > secret) {
