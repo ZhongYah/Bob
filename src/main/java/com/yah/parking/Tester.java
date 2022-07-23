@@ -11,9 +11,21 @@ import java.util.Date;
 
 public class Tester {
     public static void main(String[] args) {
-        //java8
-        java8();
-//               java();
+        LocalDateTime enter =
+                LocalDateTime.of(2022,11,11,8,5,49);
+        LocalDateTime leave =
+                LocalDateTime.of(2022,11,11,11,19,0);
+        Car car = new Car("355-TGE",enter);
+        car.setLeave(leave);
+        System.out.println(car.getId());
+        System.out.println(car.getDuration());
+        long hours = (long)Math.ceil(car.getDuration()/60.0); //ceil(天花板) 無條件進位
+        System.out.println(hours);
+        System.out.println(30*hours);
+
+//       System.currentTimeMillis(); //紀錄進場時間
+//        java8();
+//        java();
     }
 
     private static void java8() {
