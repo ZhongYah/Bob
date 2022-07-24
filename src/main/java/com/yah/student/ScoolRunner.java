@@ -2,11 +2,18 @@ package com.yah.student;
 
 import java.util.Scanner;
 
-public class StudentRunner {
+
+public class ScoolRunner {
     public static void main(String[] args) {
        //userIntput();
-        Student stu = new Student("Bob", 88 , 30 );
+        com.yah.Student.getPass();  // 引用kotlin的 var pass = 70
+//        Student.pass = 50;
+        Student stu = new Student("Bob", 88 , 75);
+        Student stu2 = new Student("Tom", 60, 40);
+        Student stu3 = new Student("Mi", 30, 55);
         stu.print();
+        stu2.print();
+        stu3.print();
         System.out.println("High scores: " + stu.highest());
     }
 

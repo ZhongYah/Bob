@@ -4,11 +4,17 @@ import java.util.Scanner
 
 fun main(args: Array<String>) {
   //  userln()
-    val stu = Student("Nian", 14, 87)
+    Student.pass = 60  // 可覆蓋原本 pass
+    val stu = Student("Nian", 34, 87)
+    val stu1 = Student("Yunus", 54, 87)
+    val stu2 = Student("Bobo", 13, 87)
     stu.print()
+    stu1.print()
+    stu2.print()
     val test = 123
     println("TEXT is : $test")
     println("Hight score: ${stu.highest()}")
+    Student.test()
 }
 
 private fun userln() {
@@ -26,13 +32,20 @@ private fun userln() {
 }
 
 class Student (var name: String?, var english: Int, var math: Int) {
+    companion object{
+        @JvmStatic
+        var pass = 70
+        fun test(){
+            println("testing")
+        }
+    }
     fun print() {
         println("$name\t$english\t$math\t${getAverage()}\t${passOrFailed()}\t${grading()}")
         /*print(name + "\t" + english + "\t" + math + "\t" + getAverage() + "\t" +
                 if (getAverage() >= 60)"PASS" else "FAILED")
         println("\t" + grading())*/
     }
-    fun passOrFailed() = if (getAverage() >= 60)"PASS" else "FAILED"
+    fun passOrFailed() = if (getAverage() >= pass)"PASS" else "FAILED"
     fun grading() /*: Char*/ = when(getAverage()){
         in 90..100 -> 'A'
         in 80..89 -> 'B'
@@ -60,7 +73,6 @@ class Student (var name: String?, var english: Int, var math: Int) {
         } else {
             max = math
         }*/
-
 
 
     fun nameCheck() = name?.length
